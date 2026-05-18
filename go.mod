@@ -1,4 +1,4 @@
-module github.com/minio/selfupdate
+module github.com/buckit-io/selfupdate
 
 go 1.24.0
 
