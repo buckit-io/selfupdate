@@ -28,7 +28,7 @@ func cleanup(path string) {
 
 // we write with a separate name for each test so that we can run them in parallel
 func writeOldFile(path string, t *testing.T) {
-	if err := ioutil.WriteFile(path, oldFile, 0777); err != nil {
+	if err := ioutil.WriteFile(path, oldFile, 0o777); err != nil {
 		t.Fatalf("Failed to write file for testing preparation: %v", err)
 	}
 }

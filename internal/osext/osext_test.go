@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+//go:build darwin || linux || freebsd || netbsd || windows
 // +build darwin linux freebsd netbsd windows
 
 package osext
@@ -31,6 +32,7 @@ func TestPrintExecutable(t *testing.T) {
 	}
 	t.Log("Executable:", ef)
 }
+
 func TestPrintExecutableFolder(t *testing.T) {
 	ef, err := ExecutableFolder()
 	if err != nil {
@@ -38,6 +40,7 @@ func TestPrintExecutableFolder(t *testing.T) {
 	}
 	t.Log("Executable Folder:", ef)
 }
+
 func TestExecutableFolder(t *testing.T) {
 	ef, err := ExecutableFolder()
 	if err != nil {
@@ -47,6 +50,7 @@ func TestExecutableFolder(t *testing.T) {
 		t.Fatal("ExecutableFolder ends with a trailing slash.")
 	}
 }
+
 func TestExecutableMatch(t *testing.T) {
 	ep, err := Executable()
 	if err != nil {
@@ -147,6 +151,7 @@ func sameFile(fn1, fn2 string) bool {
 	}
 	return os.SameFile(fi1, fi2)
 }
+
 func copyFile(dest, src string) error {
 	df, err := os.Create(dest)
 	if err != nil {

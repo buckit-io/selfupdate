@@ -131,7 +131,6 @@ func CommitBinary(opts Options) error {
 
 	// move the new exectuable in to become the new program
 	err = os.Rename(newPath, targetPath)
-
 	if err != nil {
 		// move unsuccessful
 		//
@@ -271,7 +270,7 @@ func (o *Options) getPath() (string, error) {
 
 func (o *Options) getMode() os.FileMode {
 	if o.TargetMode == 0 {
-		return 0755
+		return 0o755
 	}
 	return o.TargetMode
 }

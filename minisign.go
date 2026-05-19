@@ -70,7 +70,6 @@ func (v *Verifier) Load(signatureBytes []byte, passphraseBytes []byte) error {
 	}
 	v.publicKey, v.signature = publicKey, signature
 	return nil
-
 }
 
 func NewVerifier() *Verifier {
