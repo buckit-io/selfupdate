@@ -1,8 +1,10 @@
-[![API Reference](https://img.shields.io/badge/api-reference-blue.svg)](https://pkg.go.dev/github.com/minio/selfupdate?tab=doc) [![Apache V2 License](https://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/minio/selfupdate/blob/master/LICENSE)
+[![API Reference](https://img.shields.io/badge/api-reference-blue.svg)](https://pkg.go.dev/github.com/buckit-io/selfupdate?tab=doc) [![AGPL V3 License](https://img.shields.io/badge/license-AGPL%20V3-blue.svg)](https://github.com/buckit-io/selfupdate/blob/master/LICENSE)
 
 # selfupdate: Build self-updating Go programs
 
-> NOTE: Original work at github.com/inconshreveable/go-update, modified for the needs within MinIO project
+Module: `github.com/buckit-io/selfupdate`
+
+> NOTE: Fork of github.com/inconshreveable/go-update, maintained for Buckit and bm-cli.
 
 Package update provides functionality to implement secure, self-updating Go programs (or other single-file targets)
 A program can update itself by replacing its executable file with a new version.
@@ -18,7 +20,7 @@ import (
     "fmt"
     "net/http"
 
-    "github.com/minio/selfupdate"
+    "github.com/buckit-io/selfupdate"
 )
 
 func doUpdate(url string) error {
